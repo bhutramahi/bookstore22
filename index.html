@@ -25,9 +25,13 @@
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
   OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "b6a65cec-a5fa-450e-a297-ade20a4ccf65",
-    });
+  await OneSignal.init({
+  appId: "b6a65cec-a5fa-450e-a297-ade20a4ccf65",
+  serviceWorkerPath: "bookstore22/OneSignalSDKWorker.js",
+  serviceWorkerParam: { scope: "/bookstore22/" },
+  notifyButton: { enable: true },
+});
+
   });
 </script><script>
   window.dataLayer = window.dataLayer || [];
